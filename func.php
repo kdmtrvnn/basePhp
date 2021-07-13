@@ -140,7 +140,7 @@ function number1($num1, $num2)
 	if(1000 > $q && $q > 100 )
 	{
 		echo ($max - $min) . '<br>';
-	}elseif(1000 < $q && $q < 100 ){
+	}elseif(1000 < $q){
 		echo $q/$max . '<br>';
 	}
 	else
