@@ -36,7 +36,7 @@
 
    $q = explode('.', $name);
 
-   $path = 'C:/basePhp/images/photos/big/' . $id . ".$q[1]";
+   $path = 'photos/big/' . $id . ".$q[1]";
    
    $upload = move_uploaded_file($tmp_name, $path);
 
@@ -55,7 +55,7 @@ if($_FILES['picture']['type'] == 'image/png')
 
    imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
 
-   imagepng($thumb, 'C:/basePhp/images/photos/small/' . $id . ".$q[1]");
+   imagepng($thumb, 'photos/small/' . $id . ".$q[1]");
 }
 elseif($_FILES['picture']['type'] == 'image/jpeg')
 {
@@ -63,7 +63,7 @@ elseif($_FILES['picture']['type'] == 'image/jpeg')
 
    imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
 
-   imagejpeg($thumb, 'C:/basePhp/images/photos/small/' . $id . ".$q[1]");
+   imagejpeg($thumb, 'photos/small/' . $id . ".$q[1]");
 }
 
 ?> 
